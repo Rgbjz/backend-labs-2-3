@@ -9,17 +9,15 @@ class Subscription extends Model
 {
     protected $fillable = [
         'subscriber_id',
-        'start_date',
-        'end_date',
-        'status',
-        'subscription_type',
-        'price'
+        'service',
+        'topic',
+        'payload',
+        'expired_at'
     ];
 
     protected $casts = [
-        'start_date' => 'date',
-        'end_date' => 'date',
-        'price' => 'decimal:2'
+        'payload' => 'array',
+        'expired_at' => 'datetime'
     ];
 
     public function subscriber(): BelongsTo

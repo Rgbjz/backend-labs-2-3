@@ -18,12 +18,12 @@ import { Product } from './entities/product.entity';
       username: 'postgres',
       password: '12345',
       database: 'projectdb',
-      entities: [Category, Product], // явно вказуємо наші entity
+      entities: [Category, Product],
       autoLoadEntities: true,
       synchronize: true,
     }),
-    CategoriesModule, // підключаємо модуль категорій
-    ProductsModule,   // підключаємо модуль продуктів
+    CategoriesModule,
+    ProductsModule,
   ],
 })
 export class AppModule {}
